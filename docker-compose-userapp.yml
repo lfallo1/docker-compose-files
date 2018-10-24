@@ -1,0 +1,12 @@
+version: '3'
+services:
+  userapp-client:
+    image: userclient-nuxtjs:1
+    ports:
+      - "8000:3000"
+  userapp-client-api:
+    image: userapp-client-api
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+    ports:
+      - "8080:8080"
