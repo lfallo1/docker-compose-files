@@ -1,0 +1,11 @@
+version: '3'
+services:
+  palas-api:
+    image: palas.azurecr.io/palas:1.0-bcfb17d
+    environment:
+      - PALAS_ENVIRONMENT=default
+    volumes:
+      - C:/Users/lfallon/Downloads/nginx-1.12.0/nginx-1.12.0/html/palasFileServer/reports:/opt/palas/palasFileServer/reports
+      - C:/Users/lfallon/Downloads/nginx-1.12.0/nginx-1.12.0/html/palasFileServer/contractFiles:/opt/palas/palasFileServer/contractFiles
+    ports:
+      - "8080:8080"
